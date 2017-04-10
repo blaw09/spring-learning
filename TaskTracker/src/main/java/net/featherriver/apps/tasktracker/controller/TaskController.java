@@ -20,7 +20,7 @@ public class TaskController {
 
     @RequestMapping(value = "tasks", method = RequestMethod.GET)
     public List<Task> list() {
-        return TaskStub.list();
+        return taskRepository.findAll();
     }
 
     @RequestMapping(value = "tasks", method = RequestMethod.POST)

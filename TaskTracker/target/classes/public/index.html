@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="taskViewer">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
-<body>
-    This is a test
+<body ng-controller="MainController">
+<h1>{{message.length}}</h1>
+<div>
+    <div>Name: {{user.name}}</div>
+    <div>Location {{user.location}}</div>
+    <div>
+        <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+    </div>
+</div>
 </body>
 </html>
